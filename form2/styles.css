@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+body{
+   background: rgb(77, 77, 213);
+   background: linear-gradient(140deg, rgb(77, 77, 213) 0%, rgb(57, 57, 157) 50%, rgb(36, 36, 103) 100%) no-repeat;
+   margin: 0;
+}
+
+*{
+    font-family: "Raleway";
+}
+
+#main-content{
+    display: flex;
+    justify-content: center;
+}
+
+#form-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+    margin: 5% 0;
+    border-radius: 5px;
+    width: 70%;
+    background:rgb(40, 40, 55);
+}
+
+#form-block h1{
+    margin-top: 0;
+    color: rgb(91, 91, 255);
+    font-weight: 900;
+}
+
+#form{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.block-in-form{
+   margin: 1% 0;
+   font-size: 20px;
+   font-weight: 900;
+   color: white;
+   display: flex;
+   flex-direction: column;
+}
+
+.block-in-form input, 
+.block-in-form textarea{
+    font-size: 20px;
+    color: white;
+    background-color: #1f2030;
+    border: none;
+    min-width: clamp(200px, 70vw, 900px);
+    max-width: clamp(200px, 70vw, 900px);
+    border-radius: 5px;
+}
+
+textarea[name="message"]{
+    min-height: 150px;
+}
+
+.block-in-form input{
+    min-height: 40px;
+}
+
+#button-div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 5%;
+}
+
+.button{
+    font-size: 20px;
+    padding: 3% 10%;    
+    border: none;
+    border-radius: 5px;
+    transition: 0.25s;
+    background: #232436;
+    color: white;
+}
+
+#submit:hover{
+    background: rgb(91, 91, 255);
+}
+
+#reset:hover{
+    background: #ff4141;
+}
+
+@media screen and (min-width: 2560px) {
+    *, .button, .block-in-form input,
+    .block-in-form textarea{
+        font-size: 40px;
+    }
+
+    #form-block{
+        width: 60%;
+        padding: 3%;
+    }
+
+    body, html{
+        height: 100%;
+    }
+    
+}
+
+@media screen and (max-width: 600px){
+
+    *, .button, .block-in-form input,
+    .block-in-form textarea{
+        font-size: 15px;
+    }
+
+    #form-block{
+        width: 80%;
+    }
+
+    body, html{
+        height: 100%;
+    }
+}
